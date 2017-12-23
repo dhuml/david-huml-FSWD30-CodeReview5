@@ -14,7 +14,7 @@
 					name: 'Jane',
 					surname: 'Doe',
 					favoritePerformers: ["Justin Timberlake", "Ed Sheeran", "Emma Watson"],
-					age: 25,
+					age: 23,
 					myPhoto: 'img/image2.jpg',
 					likes: 2
 				},
@@ -22,7 +22,7 @@
 					name: 'Max',
 					surname: 'Mustermann',
 					favoritePerformers: ["Justin Timberlake", "Ed Sheeran", "Emma Watson"],
-					age: 25,
+					age: 28,
 					myPhoto: 'img/image3.jpg',
 					likes: 4
 				},
