@@ -72,7 +72,7 @@
 
 
 		.profile {
-		/*	height: 200px;*/
+		
 			min-width: 600px;
 			background-color: #BA55D3;
 			margin: 5px;
@@ -87,8 +87,6 @@
 			align-items: center;
 			justify-content: center;
 			padding: 20px;
-
-
 		}
 
 
@@ -114,7 +112,6 @@
 			padding:15px;
 			color: red;
 			font-size: 40px;
-
 		}
 
 		.likebtn {
@@ -147,11 +144,39 @@
 			margin: 50px;
 		}
 
+		/*sort navigation*/
 
+		#mainnav {
+			width:40%;
+			border: 2px solid red;
+			font-size: 20px;
+			margin:5px;
+			display:flex;
+			flex-flow: column;
+		}
 
-	
+		#sortnav {
+			position:relative;
+			display:flex;
+			flex-flow: column;
+		}
 
+		#arrow>img {
+			width: 20px;
+			height: 20px;	
+		}
 
+		#mainnav>button {
+			font-size: 20px;
+		}
+
+		.close {
+			display:none;
+		}
+
+		.open {
+			display: inline-block;
+		}
 
 	</style>
 </head>
@@ -173,6 +198,14 @@
 	</header>
 
 	<main>
+		<div id="mainnav"> 
+			<div id="sortnav"><span>sort by: 
+				<span id="arrow">
+					<img src="img/arrow.png" alt="">
+				</span>
+			</span></div>
+			<span id="register">Register</span>
+		</div>
 		<div id="content">
 			
 
