@@ -46,6 +46,9 @@
 	
 		];
 
+	
+	// create profiles
+
 		function createProfiles(){
 
 			likebtns = [];
@@ -58,10 +61,6 @@
 				persdiv.setAttribute("class", "profile");
 				persdiv.setAttribute("id", ("person" + i));
 				cont.appendChild(persdiv);
-				
-				
-
-
 
 
 				var left = document.createElement("div");
@@ -76,9 +75,6 @@
 				likes.setAttribute("class", ("likes"));
 				persdiv.appendChild(likes);
 				
-				
-
-
 				// add image to profile
 
 				var prfpc = document.createElement("img");
@@ -155,10 +151,6 @@
 
 
 		parEv.addEventListener('click', updateLikes, false);
-
-
-
-
 		
 			// var likebtn1 = document.getElementById("likebtn0");
 			// likebtn1.addEventListener('click', function(){updateLikes(0)});
@@ -260,6 +252,8 @@
 
 						console.log(Persons);
 			}
+			
+
 			var sortAgeBtn = document.createElement("button");
 				sortAgeBtn.appendChild(document.createTextNode("Age"));
 				sortAgeBtn.setAttribute('id', 'sortagebtn');
@@ -300,7 +294,8 @@
 
 								navbtn[i].setAttribute("class", "close");
 					 	
-					 	} }
+					 			} 
+					 	}
 
 					 	else {
 					 		for (var i = 0; i < navbtn.length; i++) {
@@ -327,56 +322,103 @@
 
 	// add form
 
-		var regform = document.createElement("form")
+		var regform = document.createElement("form");
 
 		cont.appendChild(regform);
 
 		// sur namefield
 
-		var surname = document.createElement("p")
-		var sntxt = document.createTextNode("Surname")
+		var surname = document.createElement("p");
+		var sntxt = document.createTextNode("Surname");
+		surname.setAttribute("id", "sntxt");
 		surname.appendChild(sntxt);
 		regform.appendChild(surname);
 
 		var surnamein = document.createElement("input");
-		regform.appendChild(surnamein)
+		surnamein.setAttribute("id", "snfield");
+		regform.appendChild(surnamein);
 
 		// namefield
 
-		var name = document.createElement("p")
-		var nmtxt = document.createTextNode("Name")
+		var name = document.createElement("p");
+		var nmtxt = document.createTextNode("Name");
+		name.setAttribute("id", "nametxt");
 		name.appendChild(nmtxt);
 		regform.appendChild(name);
 
 		var namein = document.createElement("input");
-		regform.appendChild(namein)
+		namein.setAttribute("id", "namefield");
+		regform.appendChild(namein);
 
 		// agefield
 
-		var age = document.createElement("p")
-		var agetxt = document.createTextNode("Age")
+		var age = document.createElement("p");
+		var agetxt = document.createTextNode("Age");
+		age.setAttribute("id", "agetxt");
 		age.appendChild(agetxt);
 		regform.appendChild(age);
 
 		var agein = document.createElement("input");
-		regform.appendChild(agein)
+		agein.setAttribute("id", "agefield");
+		regform.appendChild(agein);
 
 		// picture
 
-		var pic = document.createElement("p")
-		var pictxt = document.createTextNode("Upload Picture")
+		var pic = document.createElement("p");
+		var pictxt = document.createTextNode("Upload Picture");
+		pic.setAttribute("id", "pictxt");
 		pic.appendChild(pictxt);
 		regform.appendChild(pic);
 
 		var picturelink = document.createElement("input");
+		picturelink.setAttribute("id", "picfield");
 		regform.appendChild(picturelink);
 
 		// submit button
 
 		var submit = document.createElement("input");
 		submit.setAttribute("type", "submit");
+		submit.setAttribute("id", "regbtn");
 
 		regform.appendChild(submit);
 
 
 	}
+
+
+	// registrierung
+
+		// make eventlistener for submit button
+
+		var regbtn = document.querySelector("#regbtn");
+		
+		if (regbtn !== null) {
+			regbtn.addEventListener('click', submitForm);
+			}
+
+		// check if all fields are filled out
+
+		function submitForm() {
+			alert("hello world")
+
+			sn = document.querySelector("#snfield");
+			nm = document.querySelector("#namefield");
+			age = document.querySelector("#agefield");
+			pic = document.querySelector("#picturelink")
+
+			if (sn !== "") {
+				document.querySelector("#sntxt").innerText += " Please fill out this field";
+			} 
+
+			else {}
+
+			
+
+
+		}
+
+
+
+		// print error message if not
+
+		// 
